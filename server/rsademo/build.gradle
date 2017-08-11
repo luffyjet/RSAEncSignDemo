@@ -1,0 +1,44 @@
+group 'com.luffyjet'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+
+repositories {
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    jcenter()
+    mavenCentral()
+}
+
+configurations {
+    mybatisGenerator
+}
+
+
+
+dependencies {
+    testCompile "junit:junit:${junitVersion}"
+    testCompile "org.springframework:spring-test:${springVersion}"
+
+    compile "javax.servlet:jstl:${jstlVersion}"
+    providedCompile "javax.servlet:servlet-api:${servletApiVersion}"
+
+    compile "org.springframework:spring-webmvc:${springVersion}"
+    compile "org.springframework:spring-tx:${springVersion}"
+    compile "org.springframework:spring-jdbc:${springVersion}"
+    compile "org.springframework:spring-test:${springVersion}"
+
+    compile "log4j:log4j:${log4jVersion}"
+    compile "org.apache.commons:commons-dbcp2:${dbcpVersion}"
+    compile 'com.google.code.gson:gson:2.8.1'
+
+    // https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on
+    compile group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.54'
+}
+
+

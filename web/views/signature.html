@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSEncrypt Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jsrsasign-all-min.js"></script>
+
+    <script type="text/javascript">
+        //pkcs 8 类型
+        var privateKeySign = "-----BEGIN PRIVATE KEY-----MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALeFktGVLAe1QGuVprY87PfGRv3ZXOGwWH1eAKkN+liFeqAH89bLng2zl4WTrSiyAC88YTn+5QqEamrDnSf3Tuz6fdWcRvhFUqkASCdhOucI8gl3gStxBhYZuAKsl2qi7o9AFJtt3e6Lo+FvRI1s0ZC4FmobZiHrGiRZ8gE1KzpbAgMBAAECgYEAn8I01CPSp4ceZElrTjttYiiGBlehJorYDZK2anRTmZng7MzfdP3eQjkzz0GGPOXviS87yDvfcS9iYDyXY4JDfkjJ /fi/ckVtc2uJtZI6zK9OAGh+eUsdSsBdph1nM8+W4lS7Kvr9LFfHLYWSzLEBQBDk6Yd/OYUZFfFP9pcI4SkCQQDhayEuEVLIOn9dCrAE8EeOUDFT7FvAJfIwYCyTcNrRQRoLCtZrnVV3akdLZW9USxOvsW13SXFLP4wTPcoG0OYfAkEA0Gta8ppYCjfuzABZlENpktwt6hG341qkTRndoc2EPjPCr2SsPkALZ4lpC/CW7s7YKt2Hi585D6neNSaBW/RMRQJAeb1jw/9zF9QP6O3WtjQWUROaMFrcCl/z9pBaQp6WbqCcMg5+Usw71iw9qMh1Ya7SSPanyd6OIzeErPeX3ip/vQJAB8AGOME+htq/mXxl2FqNYXWoi2yvPtgPBgLxN+QRh9Ka6bS/puzwv5/fdR80LZspdKaaNLnuAEQbzDQrWUUDVQJBAL+nzBlRp5HWeGThcju17raX9u3qI5UrnvJLBP5K+nWrOU849F331XPowV8fwkApMygC3z1NWgq0kfWkG6iXcIg=-----END PRIVATE KEY-----";
+
+        function submits() {
+            var uname = $('#uname').val();
+            var nickname = $('#nickname').val();
+            var desp = $('#desp').val();
+
+            var timestamp =time();
+
+            var content = "desp=" + desp + "&nickname=" + nickname +"&timestamp="+ timestamp + "&username=" + uname;
+
+            console.info("content: "+content);
+
+            var sign = doSign(content);
+
+            console.info("sign: "+sign);
+
+            //提交
+            $.post("/rsa/signatureTest",
+                    {
+                        username: uname,
+                        nickname: nickname,
+                        desp: desp,
+                        timestamp:timestamp,
+                        sign: sign
+                    },
+                    function (data, status) {
+                        console.info("返回: \n" + JSON.stringify(data));
+                        if (data.result){
+                            alert("后台提示："+data.data);
+                        }else {
+                            alert("后台错误提示："+data.errorMsg);
+                        }
+                    });
+        }
+
+        //加签方法
+        function doSign(content) {
+            //从 PKCS8 private key 字符串获取RSAKey对象
+            var rsa = KEYUTIL.getKey(privateKeySign); //
+            //进行签名，获得hex值
+            var hSig = rsa.sign(content, "sha256");
+            //转换成base64值
+            return  hex2b64(hSig);  // 得到签名Hex，并转成base64string
+        }
+
+
+        function time() {
+            var now = new Date();
+            var year = now.getFullYear(),
+                    month = now.getMonth() + 1,
+                    date = now.getDate(),
+                    hour = now.getHours(),
+                    minute = now.getMinutes(),
+                    second = now.getSeconds();
+            return year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
+        }
+    </script>
+</head>
+<br>
+
+<p>用户名：</p><input type="text" id="uname">
+<p>昵称：</p><input type="text" id="nickname">
+<p>简介：</p><input type="text" id="desp">
+
+</br></br>
+<input type="button" value="提交" onclick="submits()">
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSEncrypt Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jsencrypt.js"></script>
+
+    <script type="text/javascript">
+        var publickey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCYHKR0ABEmHFGkEnOZDKlFjbDFtvBiTqZLe7pTLMERHGz4VknWgLqylbI6ezYNIbKBYSLUeGcx8jFS5roirJXJZGzzO597QbrWoWcV2t1oq9KHzjzvvSL/QlncnNtY5eLG/Lj8UpD8yFIJ5/o8w7FX4kUnLTlfVle3xdJ+TjAMxwIDAQAB";
+
+        var encrypted;
+
+        function submit() {
+            var uname = $('#uname').val();
+            var psw = $('#pwd').val();
+
+            //加密密码
+            encrypted = enc(publickey, psw);
+
+            //提交
+            $.post("/rsa/decode",
+                    {
+                        username: uname,
+                        password: encrypted
+                    },
+                    function (data, status) {
+
+                        console.info("返回: \n" + JSON.stringify(data));
+
+                        alert("解密后的密码为: \n" + data.data);
+                    });
+        }
+
+        //加密方法
+        function enc(pubkey, pwd) {
+            // Encrypt with the public key...
+            var encrypt = new JSEncrypt();
+            encrypt.setPublicKey(pubkey);
+            encrypted = encrypt.encrypt(pwd);
+            return encrypted;
+        }
+
+        //解密方法
+        function dec() {
+            // Decrypt with the private key...
+            var decrypt = new JSEncrypt();
+            decrypt.setPrivateKey($('#privkey').val());
+            var uncrypted = decrypt.decrypt(encrypted);
+
+            // Now a simple check to see if the round-trip worked.
+            if (uncrypted == $('#pwd').val()) {
+                console.info("解密结果："+uncrypted);
+                alert('It works!!!');
+            } else {
+                alert('Something went wrong....');
+            }
+        }
+    </script>
+</head>
+<br>
+
+<p>用户名：</p><input type="text" id="uname">
+<p>密 码：</p><input type="password" id="pwd">
+</br></br>
+<input type="button" value="提交" onclick="submit()">
+
+
+</br></br>
+<input type="button" value="decode" onclick="dec()">
+
+<textarea id="privkey">
+MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJgcpHQAESYcUaQSc5kMqUWNsMW28GJOpkt7ulMswREcbPhWSdaAurKVsjp7Ng0hsoFhItR4ZzHyMVLmuiKslclkbPM7n3tButahZxXa3Wir0ofOPO+9Iv9CWdyc21jl4sb8uPxSkPzIUgnn+jzDsVfiRSctOV9WV7fF0n5OMAzHAgMBAAECgYAfKNbjUFQy+2AZ/RGjC33tWo4YolXxvWzBT7ImcaeHCsyjvoFXqH0WMiYVZsH2xK1dZXmODrANAjDqa4s7qSDxlFQjeodBO4P1JprtpUMsCymG7T86FB9QsvA8NM6nxa+DVGv5/HiVN5jm5WI1u0ZF0PiY2zvLPZX7o+ydayz30QJBANLA/0Mv+tFuIfq81BZB8aK4UbIyrrAO32UElTG6P7M+gyQsPL2ak8sWPS8wIdfvVk2H6ZFgXcFCKlllpSlXcBkCQQC4xLBliKh83McPlKWlszgQTK9fe9xD6ct/uaLG2nTHfPHU8J+dJryVdVcZcp1mcnLw5C7B4LNzKAagkuJW0X/fAkA40EQ/1XhU6s6ILE00LtS3295SHm2PEoNQVRrvC9lONaTepHo/VqNO1RDrXptQ/bkTL3dcdFDx3ydRcCBE88hJAkEAimTIu0Rg7yVu9HyiljpnA85sjVh442V6x3CEO+3lCobLnHOfGlapakk5tBXlT5bqAQTpAM8NmnOggyWB4wWIgQJAXpTy5PMBOZSmAGHK5JbQEHA5fMPyYb1d2nJ1aqe+qF54WtaROIR2DSddnk2sdpgaeQXDIsj9ZKSFJzRSByrUyA==
+</textarea>
+</body>
+</html>

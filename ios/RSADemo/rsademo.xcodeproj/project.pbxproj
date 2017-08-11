@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1557AEAC1F344BE400484F6C /* Define.m in Sources */ = {isa = PBXBuildFile; fileRef = 1557AEAB1F344BE400484F6C /* Define.m */; };
+		15C6BE221F341A6200F8D28B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C6BE211F341A6200F8D28B /* main.m */; };
+		15C6BE251F341A6200F8D28B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C6BE241F341A6200F8D28B /* AppDelegate.m */; };
+		15C6BE281F341A6200F8D28B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C6BE271F341A6200F8D28B /* ViewController.m */; };
+		15C6BE2B1F341A6200F8D28B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C6BE291F341A6200F8D28B /* Main.storyboard */; };
+		15C6BE2D1F341A6200F8D28B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C6BE2C1F341A6200F8D28B /* Assets.xcassets */; };
+		15C6BE301F341A6200F8D28B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C6BE2E1F341A6200F8D28B /* LaunchScreen.storyboard */; };
+		15C6BE3B1F341A6200F8D28B /* rsademoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C6BE3A1F341A6200F8D28B /* rsademoTests.m */; };
+		15C6BE461F341A6200F8D28B /* rsademoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C6BE451F341A6200F8D28B /* rsademoUITests.m */; };
+		15C6BE551F341CA000F8D28B /* HttpBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C6BE541F341CA000F8D28B /* HttpBase.m */; };
+		15C6BE581F34437600F8D28B /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C6BE571F34437600F8D28B /* RSAEncryptor.m */; };
+		15C6BE5A1F34442700F8D28B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C6BE591F34442700F8D28B /* Security.framework */; };
+		EC0C4BA4CFED61EEAE61DAE1 /* libPods-rsademo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8679DC4951D4EC586ED54175 /* libPods-rsademo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15C6BE371F341A6200F8D28B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15C6BE151F341A6200F8D28B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15C6BE1C1F341A6200F8D28B;
+			remoteInfo = rsademo;
+		};
+		15C6BE421F341A6200F8D28B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15C6BE151F341A6200F8D28B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15C6BE1C1F341A6200F8D28B;
+			remoteInfo = rsademo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1557AEAA1F344BE400484F6C /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		1557AEAB1F344BE400484F6C /* Define.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Define.m; sourceTree = "<group>"; };
+		15C6BE1D1F341A6200F8D28B /* rsademo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rsademo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C6BE211F341A6200F8D28B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15C6BE231F341A6200F8D28B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		15C6BE241F341A6200F8D28B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		15C6BE261F341A6200F8D28B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		15C6BE271F341A6200F8D28B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		15C6BE2A1F341A6200F8D28B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15C6BE2C1F341A6200F8D28B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15C6BE2F1F341A6200F8D28B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15C6BE311F341A6200F8D28B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15C6BE361F341A6200F8D28B /* rsademoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rsademoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C6BE3A1F341A6200F8D28B /* rsademoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rsademoTests.m; sourceTree = "<group>"; };
+		15C6BE3C1F341A6200F8D28B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15C6BE411F341A6200F8D28B /* rsademoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rsademoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C6BE451F341A6200F8D28B /* rsademoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rsademoUITests.m; sourceTree = "<group>"; };
+		15C6BE471F341A6200F8D28B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15C6BE531F341CA000F8D28B /* HttpBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBase.h; sourceTree = "<group>"; };
+		15C6BE541F341CA000F8D28B /* HttpBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBase.m; sourceTree = "<group>"; };
+		15C6BE561F34437600F8D28B /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		15C6BE571F34437600F8D28B /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
+		15C6BE591F34442700F8D28B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		24E0E422DCC877546C8721BB /* Pods-rsademo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsademo.release.xcconfig"; path = "Pods/Target Support Files/Pods-rsademo/Pods-rsademo.release.xcconfig"; sourceTree = "<group>"; };
+		8679DC4951D4EC586ED54175 /* libPods-rsademo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rsademo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E797E423F3AFD6B775BA691 /* Pods-rsademo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsademo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rsademo/Pods-rsademo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15C6BE1A1F341A6200F8D28B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C6BE5A1F34442700F8D28B /* Security.framework in Frameworks */,
+				EC0C4BA4CFED61EEAE61DAE1 /* libPods-rsademo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C6BE331F341A6200F8D28B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C6BE3E1F341A6200F8D28B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15C6BE141F341A6200F8D28B = {
+			isa = PBXGroup;
+			children = (
+				15C6BE1F1F341A6200F8D28B /* rsademo */,
+				15C6BE391F341A6200F8D28B /* rsademoTests */,
+				15C6BE441F341A6200F8D28B /* rsademoUITests */,
+				15C6BE1E1F341A6200F8D28B /* Products */,
+				92D33244E899D2A55B7D1D84 /* Pods */,
+				81A5A696AAB5D5C89074464A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		15C6BE1E1F341A6200F8D28B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15C6BE1D1F341A6200F8D28B /* rsademo.app */,
+				15C6BE361F341A6200F8D28B /* rsademoTests.xctest */,
+				15C6BE411F341A6200F8D28B /* rsademoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15C6BE1F1F341A6200F8D28B /* rsademo */ = {
+			isa = PBXGroup;
+			children = (
+				15C6BE231F341A6200F8D28B /* AppDelegate.h */,
+				15C6BE241F341A6200F8D28B /* AppDelegate.m */,
+				15C6BE261F341A6200F8D28B /* ViewController.h */,
+				15C6BE271F341A6200F8D28B /* ViewController.m */,
+				15C6BE291F341A6200F8D28B /* Main.storyboard */,
+				15C6BE2C1F341A6200F8D28B /* Assets.xcassets */,
+				15C6BE2E1F341A6200F8D28B /* LaunchScreen.storyboard */,
+				15C6BE311F341A6200F8D28B /* Info.plist */,
+				15C6BE201F341A6200F8D28B /* Supporting Files */,
+				15C6BE531F341CA000F8D28B /* HttpBase.h */,
+				15C6BE541F341CA000F8D28B /* HttpBase.m */,
+				15C6BE561F34437600F8D28B /* RSAEncryptor.h */,
+				15C6BE571F34437600F8D28B /* RSAEncryptor.m */,
+				1557AEAA1F344BE400484F6C /* Define.h */,
+				1557AEAB1F344BE400484F6C /* Define.m */,
+			);
+			path = rsademo;
+			sourceTree = "<group>";
+		};
+		15C6BE201F341A6200F8D28B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15C6BE211F341A6200F8D28B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15C6BE391F341A6200F8D28B /* rsademoTests */ = {
+			isa = PBXGroup;
+			children = (
+				15C6BE3A1F341A6200F8D28B /* rsademoTests.m */,
+				15C6BE3C1F341A6200F8D28B /* Info.plist */,
+			);
+			path = rsademoTests;
+			sourceTree = "<group>";
+		};
+		15C6BE441F341A6200F8D28B /* rsademoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				15C6BE451F341A6200F8D28B /* rsademoUITests.m */,
+				15C6BE471F341A6200F8D28B /* Info.plist */,
+			);
+			path = rsademoUITests;
+			sourceTree = "<group>";
+		};
+		81A5A696AAB5D5C89074464A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15C6BE591F34442700F8D28B /* Security.framework */,
+				8679DC4951D4EC586ED54175 /* libPods-rsademo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92D33244E899D2A55B7D1D84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E797E423F3AFD6B775BA691 /* Pods-rsademo.debug.xcconfig */,
+				24E0E422DCC877546C8721BB /* Pods-rsademo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15C6BE1C1F341A6200F8D28B /* rsademo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C6BE4A1F341A6200F8D28B /* Build configuration list for PBXNativeTarget "rsademo" */;
+			buildPhases = (
+				4AA467DE47A64F0635E2AC79 /* [CP] Check Pods Manifest.lock */,
+				15C6BE191F341A6200F8D28B /* Sources */,
+				15C6BE1A1F341A6200F8D28B /* Frameworks */,
+				15C6BE1B1F341A6200F8D28B /* Resources */,
+				58C8E63F4134A104EA7BA853 /* [CP] Embed Pods Frameworks */,
+				D6722B77B57D2767043C8EB9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rsademo;
+			productName = rsademo;
+			productReference = 15C6BE1D1F341A6200F8D28B /* rsademo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15C6BE351F341A6200F8D28B /* rsademoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C6BE4D1F341A6200F8D28B /* Build configuration list for PBXNativeTarget "rsademoTests" */;
+			buildPhases = (
+				15C6BE321F341A6200F8D28B /* Sources */,
+				15C6BE331F341A6200F8D28B /* Frameworks */,
+				15C6BE341F341A6200F8D28B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15C6BE381F341A6200F8D28B /* PBXTargetDependency */,
+			);
+			name = rsademoTests;
+			productName = rsademoTests;
+			productReference = 15C6BE361F341A6200F8D28B /* rsademoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15C6BE401F341A6200F8D28B /* rsademoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C6BE501F341A6200F8D28B /* Build configuration list for PBXNativeTarget "rsademoUITests" */;
+			buildPhases = (
+				15C6BE3D1F341A6200F8D28B /* Sources */,
+				15C6BE3E1F341A6200F8D28B /* Frameworks */,
+				15C6BE3F1F341A6200F8D28B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15C6BE431F341A6200F8D28B /* PBXTargetDependency */,
+			);
+			name = rsademoUITests;
+			productName = rsademoUITests;
+			productReference = 15C6BE411F341A6200F8D28B /* rsademoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15C6BE151F341A6200F8D28B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = luffyjet;
+				TargetAttributes = {
+					15C6BE1C1F341A6200F8D28B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7LFM423USV;
+						ProvisioningStyle = Automatic;
+					};
+					15C6BE351F341A6200F8D28B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7LFM423USV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 15C6BE1C1F341A6200F8D28B;
+					};
+					15C6BE401F341A6200F8D28B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7LFM423USV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 15C6BE1C1F341A6200F8D28B;
+					};
+				};
+			};
+			buildConfigurationList = 15C6BE181F341A6200F8D28B /* Build configuration list for PBXProject "rsademo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15C6BE141F341A6200F8D28B;
+			productRefGroup = 15C6BE1E1F341A6200F8D28B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15C6BE1C1F341A6200F8D28B /* rsademo */,
+				15C6BE351F341A6200F8D28B /* rsademoTests */,
+				15C6BE401F341A6200F8D28B /* rsademoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15C6BE1B1F341A6200F8D28B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C6BE301F341A6200F8D28B /* LaunchScreen.storyboard in Resources */,
+				15C6BE2D1F341A6200F8D28B /* Assets.xcassets in Resources */,
+				15C6BE2B1F341A6200F8D28B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C6BE341F341A6200F8D28B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C6BE3F1F341A6200F8D28B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AA467DE47A64F0635E2AC79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		58C8E63F4134A104EA7BA853 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rsademo/Pods-rsademo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6722B77B57D2767043C8EB9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rsademo/Pods-rsademo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15C6BE191F341A6200F8D28B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C6BE551F341CA000F8D28B /* HttpBase.m in Sources */,
+				15C6BE281F341A6200F8D28B /* ViewController.m in Sources */,
+				1557AEAC1F344BE400484F6C /* Define.m in Sources */,
+				15C6BE251F341A6200F8D28B /* AppDelegate.m in Sources */,
+				15C6BE221F341A6200F8D28B /* main.m in Sources */,
+				15C6BE581F34437600F8D28B /* RSAEncryptor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C6BE321F341A6200F8D28B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C6BE3B1F341A6200F8D28B /* rsademoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C6BE3D1F341A6200F8D28B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C6BE461F341A6200F8D28B /* rsademoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15C6BE381F341A6200F8D28B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15C6BE1C1F341A6200F8D28B /* rsademo */;
+			targetProxy = 15C6BE371F341A6200F8D28B /* PBXContainerItemProxy */;
+		};
+		15C6BE431F341A6200F8D28B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15C6BE1C1F341A6200F8D28B /* rsademo */;
+			targetProxy = 15C6BE421F341A6200F8D28B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15C6BE291F341A6200F8D28B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15C6BE2A1F341A6200F8D28B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15C6BE2E1F341A6200F8D28B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15C6BE2F1F341A6200F8D28B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15C6BE481F341A6200F8D28B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		15C6BE491F341A6200F8D28B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15C6BE4B1F341A6200F8D28B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E797E423F3AFD6B775BA691 /* Pods-rsademo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7LFM423USV;
+				INFOPLIST_FILE = rsademo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luffyjet.rsademo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		15C6BE4C1F341A6200F8D28B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24E0E422DCC877546C8721BB /* Pods-rsademo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7LFM423USV;
+				INFOPLIST_FILE = rsademo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luffyjet.rsademo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		15C6BE4E1F341A6200F8D28B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7LFM423USV;
+				INFOPLIST_FILE = rsademoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luffyjet.rsademoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rsademo.app/rsademo";
+			};
+			name = Debug;
+		};
+		15C6BE4F1F341A6200F8D28B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7LFM423USV;
+				INFOPLIST_FILE = rsademoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luffyjet.rsademoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rsademo.app/rsademo";
+			};
+			name = Release;
+		};
+		15C6BE511F341A6200F8D28B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7LFM423USV;
+				INFOPLIST_FILE = rsademoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luffyjet.rsademoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = rsademo;
+			};
+			name = Debug;
+		};
+		15C6BE521F341A6200F8D28B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7LFM423USV;
+				INFOPLIST_FILE = rsademoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luffyjet.rsademoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = rsademo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15C6BE181F341A6200F8D28B /* Build configuration list for PBXProject "rsademo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C6BE481F341A6200F8D28B /* Debug */,
+				15C6BE491F341A6200F8D28B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15C6BE4A1F341A6200F8D28B /* Build configuration list for PBXNativeTarget "rsademo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C6BE4B1F341A6200F8D28B /* Debug */,
+				15C6BE4C1F341A6200F8D28B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15C6BE4D1F341A6200F8D28B /* Build configuration list for PBXNativeTarget "rsademoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C6BE4E1F341A6200F8D28B /* Debug */,
+				15C6BE4F1F341A6200F8D28B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15C6BE501F341A6200F8D28B /* Build configuration list for PBXNativeTarget "rsademoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C6BE511F341A6200F8D28B /* Debug */,
+				15C6BE521F341A6200F8D28B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15C6BE151F341A6200F8D28B /* Project object */;
+}
