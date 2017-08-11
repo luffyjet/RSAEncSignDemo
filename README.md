@@ -5,6 +5,8 @@
 ```
  请安装最新 openssl , 运行 generateRSAKeypair.sh 生成。
  务必记住中途提示输入的密码，iOS需要用到。
+ 
+ Demo 使用的一份密钥文件位于 key 目录
 	
 ```
 
