@@ -46,7 +46,7 @@ app_id=2014072300007148&biz_content={"button":[{"actionParam":"ZFB_HFCZ","action
 ```
 3.调用签名函数
 
-使用各自语言对应的SHA256WithRSA(对应sign_type为RSA2)或SHA1WithRSA(对应sign_type为RSA)签名函数利用商户私钥对待签名字符串进行签名，并进行Base64编码。
+使用各自语言对应的SHA256WithRSA签名函数利用私钥对待签名字符串进行签名，并进行Base64编码。
 
 4.把生成的签名赋值给sign参数，拼接到请求参数中，比如。
 
