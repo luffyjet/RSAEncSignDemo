@@ -1,4 +1,7 @@
-# 服务端API加签说明
+# 服务端API加签DEMO说明
+
+本Demo包含 Java后台，web前端，Android，iOS
+
 
 ## 为了各个终端兼容，采用openssl生成密钥对
 
